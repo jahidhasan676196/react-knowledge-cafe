@@ -1,4 +1,4 @@
-import Bookmark from "./Bookmark/Bookmarks";
+import Bookmark from './Bookmark/Bookmark';
 import propTypes from 'prop-types';
 
 
@@ -12,7 +12,7 @@ const Bookmarks = ({allblogs,time}) => {
                 <h3 className="text-2xl text-[#111111] font-bold">Bookmarked Blogs : {allblogs.length}</h3>
                 {
                     allblogs.map(singleblog=><Bookmark 
-                        key
+                        key={singleblog.id}
                         singleblog={singleblog}></Bookmark>)
                 }
             </div>
